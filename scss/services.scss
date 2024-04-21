@@ -1,0 +1,78 @@
+.services {
+    background-color: var(--grey);
+    &__conteiner {
+        text-align: center;
+        color: var(--dark);
+        padding: 170px 15px;
+        @media screen and (max-width: 900px){
+            padding: 50px 15px;
+        }
+    }
+
+    &__sub-title {
+        display: inline-block;
+    }
+
+    &__title {
+        margin-top: 8px;
+        transition: all 0.8s ease 0.2s;
+    }
+
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        margin-top: 38px;
+        gap: 20px;
+        @media screen and (max-width: 900px){
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+        @media screen and (max-width: 600px){
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+        }
+    }
+
+    &__item {
+        text-align: left;
+        padding: 49px 47px;
+        border-radius: 20px;
+        background: rgb(235, 235, 235);
+        &:nth-child(1){
+            transition: all 0.8s ease 0.2s;
+        }
+        &:nth-child(2){
+            transition: all 0.8s ease 0.4s;
+        }
+        &:nth-child(3){
+            transition: all 0.8s ease 0.6s;
+        }
+        &:nth-child(4){
+            transition: all 0.8s ease 0.8s;
+        }
+        &:nth-child(5){
+            transition: all 0.8s ease 1s;
+        }
+        &:nth-child(6){
+            transition: all 0.8s ease 1.2s;
+        }
+    }
+
+    &__img {
+        margin-bottom: 25px;
+    }
+
+    &__desc {
+        font-family: "Cabin";
+        font-size: 25px;
+        font-weight: 600;
+        line-height: 116%;
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        color: var(--liteGrey);
+        line-height: 147.5%;
+    }
+}

@@ -1,0 +1,44 @@
+.presentation__container {
+  padding: 178px 15px 175px 15px;
+}
+@media screen and (max-width: 900px) {
+  .presentation__container {
+    padding: 50px 15px;
+  }
+}
+.presentation__block {
+  display: inline-block;
+  border-radius: 29px;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 48px 60px;
+}
+@media screen and (max-width: 900px) {
+  .presentation__block {
+    padding: 24px 30px;
+  }
+}
+.presentation__sub-title {
+  margin-bottom: 21px;
+  background-color: var(--yellow);
+  color: var(--dark);
+}
+.presentation__title {
+  font-family: "Cabin";
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 116%;
+  color: var(--dark);
+  max-width: 668px;
+}
+@media screen and (max-width: 800px) {
+  .presentation__title {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .presentation__title {
+    font-size: 26px;
+  }
+}

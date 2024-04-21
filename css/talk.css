@@ -1,0 +1,88 @@
+.talk__container {
+  color: var(--white);
+  padding-bottom: 150px;
+}
+@media screen and (max-width: 1024px) {
+  .talk__container {
+    padding-bottom: 50px;
+  }
+}
+.talk__block {
+  border-radius: 30px;
+  background: url("../img/Home-two/talk_bg.jpeg") 0 0/cover no-repeat;
+  background-position: left;
+  padding: 80px 100px 70px 100px;
+}
+@media screen and (max-width: 900px) {
+  .talk__block {
+    padding: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .talk__block {
+    text-align: center;
+  }
+}
+.talk__sub-title {
+  background: rgb(50, 50, 50);
+}
+.talk__title {
+  margin: 12px 0 5px 0;
+}
+.talk__text {
+  max-width: 470px;
+}
+@media screen and (max-width: 768px) {
+  .talk__text {
+    margin: 0 auto;
+  }
+}
+.talk__form {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+@media screen and (max-width: 768px) {
+  .talk__form {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.talk__email {
+  color: rgb(169, 169, 169);
+  line-height: 147.5%;
+  padding: 22px 20px;
+  border: 1px solid rgb(193, 193, 193);
+  border-radius: 54px;
+  background-color: var(--white);
+  width: 304px;
+  border: 2px solid transparent;
+  transition: all 0.5s ease 0s;
+}
+.talk__email:focus {
+  border-color: rgb(78, 175, 78);
+}
+.talk__email._error {
+  border-color: red;
+}
+@media screen and (max-width: 500px) {
+  .talk__email {
+    width: 100%;
+  }
+}
+.talk__btn {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 160%;
+  padding: 16px 27px;
+  border-radius: 42px;
+  border: 2px solid transparent;
+  background-color: rgb(78, 175, 78);
+  transition: all 0.5s ease 0s;
+}
+.talk__btn:hover {
+  border-color: rgb(78, 175, 78);
+  background-color: var(--white);
+}

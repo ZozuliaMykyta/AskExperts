@@ -1,0 +1,414 @@
+// Подключение шрифтов и т.п
+@import "nullstyle.scss";
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+:root{
+    --dark: #181818;
+    --green: #4EAF4E;
+    --yellow: #FFCC4A;
+    --grey: #F5F5F5;
+    --white: #fff;
+    --liteGrey: #595566;
+}
+body.lock{
+	overflow: hidden;
+}
+.active-f{
+    display: flex !important;
+}
+.none{
+    display: none !important;
+}
+.anim-item{
+    overflow: hidden;
+}
+.anim-show{
+    transform: translate(0, 120%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+}
+.anim-show.active,
+.active .anim-show{
+    transform: translate(0, 0);
+    opacity: 1;
+}
+.anim-show-left{
+    transform: translate(-120%, 0);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+}
+.anim-show-left.active,
+.active .anim-show-left{
+    transform: translate(0, 0);
+    opacity: 1;
+}
+.anim-show-btn-left{
+    transform: translate(-120%, -50%);
+    opacity: 0;
+    transition: all 0.8s ease 0.4s;
+}
+.anim-show-btn-left.active,
+.active .anim-show-btn-left{
+    transform: translate(0, -50%);
+    opacity: 1;
+}
+.anim-show-right{
+    transform: translate(120%, 0);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+}
+.anim-show-right.active,
+.active .anim-show-right{
+    transform: translate(0, 0);
+    opacity: 1;
+}
+.anim-show-btn-right{
+    transform: translate(120%, -50%);
+    opacity: 0;
+    transition: all 0.8s ease 0.4s;
+}
+.anim-show-btn-right.active,
+.active .anim-show-btn-right{
+    transform: translate(0, -50%);
+    opacity: 1;
+}
+body{
+    font-family: "Lato";
+    font-weight: 400;
+}
+.title {
+    font-family: "Cabin";
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 116%;
+    @media screen and (max-width: 700px){
+        font-size: 35px;       
+    }
+    @media screen and (max-width: 500px){
+        font-size: 28px;       
+    }
+}
+.sub-title {
+    display: inline-block;
+    line-height: 147.5%;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--white);
+    border-radius: 20px;
+    background-color: var(--green);
+    padding: 0 16px;
+    letter-spacing: 14.5%;
+}
+.main{
+    flex: 1 1 auto;
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    overflow: hidden;
+}
+.container {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+// Подключение блоков
+@import "header.scss";
+@import "presentation.scss";
+@import "subscribe.scss";
+@import "footer.scss";
+
+.presentation{
+    &__container{
+        padding: 145px 15px;
+        @media screen and (max-width: 900px) {
+            padding: 50px 15px;
+        }
+    }
+}
+.live {
+
+    &__container {
+        padding: 150px 15px 80px 15px;
+        @media screen and (max-width: 1024px) {
+            padding: 50px 15px;
+        }
+    }
+
+    &__img {
+        max-width: 1200px;
+        width: 100%;
+        height: auto;
+    }
+
+    &__body {
+        border-radius: 30px;
+        max-width: 1028px;
+        margin: -53px auto 0 auto;
+        background-color: var(--dark);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 53px 60px;
+        color: var(--white);
+        transition: all 0.8s ease 0.3s;
+        @media screen and (max-width: 900px){
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+        @media screen and (max-width: 768px){
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 30px 45px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 100px;
+        @media screen and (max-width: 900px){
+            gap: 30px;
+        }
+        @media screen and (max-width: 768px){
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &__info {
+        margin-bottom: 10px;
+        font-family: 'Cabin';
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 116%;
+    }
+
+    &__desc {
+        font-family: 'Cabin';
+        line-height: 116%;
+    }
+
+    &__link {
+        display: inline-block;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 160%;
+        color: var(--dark);
+        padding: 16px 33px;
+        border-radius: 42px;
+        background-color: var(--yellow);
+        border: 2px solid transparent;
+        transition: all 0.5s ease 0s;
+        &:hover{
+            background-color: var(--white);
+            border: 2px solid var(--yellow);
+            color: var(--dark);
+        }
+        @media screen and (max-width: 768px){
+            margin-top: 20px;
+        }
+    }
+}
+.overview {
+
+    &__container {
+        max-width: 822px;
+        color: var(--dark);
+        @media screen and (max-width: 1024px) {
+            padding: 50px 15px;
+        }
+    }
+    &__title {
+        font-family: 'Cabin';
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 116%;
+        margin-bottom: 15px;
+    }
+
+    &__text {
+        max-width: 792px;
+        line-height: 147.5%;
+        color: var(--liteGrey);
+    }
+
+    &__list {
+        margin-top: 40px;
+        padding-left: 5px;
+    }
+
+    &__item {
+        line-height: 116%;
+        color: var(--liteGrey);
+        position: relative;
+        padding-left: 20px;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 5px;
+            height: 5px;
+            background-color: var(--liteGrey);
+            border-radius: 50%;
+        }
+        &:not(:last-child){
+            margin-bottom: 16px;
+        }
+        &:nth-child(1){
+            transition: all 0.8s ease 0.2s;
+        }
+        &:nth-child(2){
+            transition: all 0.8s ease 0.3s;
+        }
+        &:nth-child(3){
+            transition: all 0.8s ease 0.4s;
+        }
+        &:nth-child(4){
+            transition: all 0.8s ease 0.5s;
+        }
+    }
+}
+.story {
+
+    &__container {
+        margin-top: 64px;
+        max-width: 822px;
+        text-align: center;
+        @media screen and (max-width: 1024px) {
+            margin-top: 0;
+        }
+    }
+
+    &__title {
+        color: rgb(28, 28, 28);
+        font-family: 'Cabin';
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 116%;
+        margin-bottom: 26px;
+        text-align: left;
+    }
+
+    &__text {
+        line-height: 147.5%;
+        color: var(--liteGrey);
+        margin-bottom: 26px;
+        max-width: 793px;
+        text-align: left;
+        &:nth-child(2){
+            transition: all 0.8s ease 0.2s;
+        }
+        &:nth-child(3){
+            transition: all 0.8s ease 0.4s;
+        }
+    }
+
+    &__img {
+        & img{
+            max-width: 709px;
+            width: 100%;
+            height: auto;
+            transition: all 0.8s ease 0.6s;
+        }
+    }
+}
+.project {
+
+    &__container {
+        margin-top: 29px;
+        max-width: 822px;
+    }
+
+    &__title {
+        font-family: 'Cabin';
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 116%;
+        color: #000;
+        margin-bottom: 38px;
+        @media screen and (max-width: 768px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__text {
+        line-height: 147.5%;
+        color: var(--liteGrey);
+        &:nth-child(2){
+            transition: all 0.8s ease 0.2s;
+        }
+        &:nth-child(3){
+            transition: all 0.8s ease 0.4s;
+        }
+        &:not(:last-child){
+            margin-bottom: 38px;
+        }
+    }
+}
+.cases {
+
+    &__container {
+        padding-bottom: 150px;
+        text-align: center;
+        @media screen and (max-width: 1024px){
+            padding-bottom: 50px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 31px;
+    }
+
+    &__body {
+        padding: 41px 25px;
+        background: rgb(217, 217, 217);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 25px;
+        transition: all 0.8s ease 0.2s;
+        @media screen and (max-width: 768px){
+            justify-content: center;
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        & img{
+            border-radius: 20px;
+            max-width: 366px;
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__link-block{
+        transition: all 0.8s ease 0.5s;
+    }
+    &__link {
+        display: inline-block;
+        margin-top: 50px;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 160%;
+        text-align: center;
+        color: var(--white);
+        padding: 15px 36px;
+        border-radius: 42px;
+        background-color: var(--dark);
+    }
+}

@@ -1,0 +1,233 @@
+// Подключение шрифтов и т.п
+@import "nullstyle.scss";
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+:root{
+    --dark: #181818;
+    --green: #4EAF4E;
+    --yellow: #FFCC4A;
+    --grey: #F5F5F5;
+    --white: #fff;
+    --liteGrey: #595566;
+}
+body.lock{
+	overflow: hidden;
+}
+.active-f{
+    display: flex !important;
+}
+.none{
+    display: none !important;
+}
+.anim-item{
+    overflow: hidden;
+}
+.anim-show{
+    transform: translate(0, 120%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+}
+.anim-show.active,
+.active .anim-show{
+    transform: translate(0, 0);
+    opacity: 1;
+}
+.anim-show-left{
+    transform: translate(-120%, 0);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+}
+.anim-show-left.active,
+.active .anim-show-left{
+    transform: translate(0, 0);
+    opacity: 1;
+}
+.anim-show-btn-left{
+    transform: translate(-120%, -50%);
+    opacity: 0;
+    transition: all 0.8s ease 0.4s;
+}
+.anim-show-btn-left.active,
+.active .anim-show-btn-left{
+    transform: translate(0, -50%);
+    opacity: 1;
+}
+.anim-show-right{
+    transform: translate(120%, 0);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+}
+.anim-show-right.active,
+.active .anim-show-right{
+    transform: translate(0, 0);
+    opacity: 1;
+}
+.anim-show-btn-right{
+    transform: translate(120%, -50%);
+    opacity: 0;
+    transition: all 0.8s ease 0.4s;
+}
+.anim-show-btn-right.active,
+.active .anim-show-btn-right{
+    transform: translate(0, -50%);
+    opacity: 1;
+}
+body{
+    font-family: "Lato";
+    font-weight: 400;
+}
+.title {
+    font-family: "Cabin";
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 116%;
+    @media screen and (max-width: 700px){
+        font-size: 35px;       
+    }
+    @media screen and (max-width: 500px){
+        font-size: 28px;       
+    }
+}
+.sub-title {
+    display: inline-block;
+    line-height: 147.5%;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--white);
+    border-radius: 20px;
+    background-color: var(--green);
+    padding: 0 16px;
+    letter-spacing: 14.5%;
+}
+.main{
+    flex: 1 1 auto;
+    background-color: rgb(245, 245, 245);
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    overflow: hidden;
+}
+.container {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+// Подключение блоков
+@import "header.scss";
+@import "footer.scss";
+
+.home {
+    &__container {
+        padding: 160px 15px 180px 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        @media screen and (max-width: 1024px){
+            padding: 70px 15px;
+        }
+    }
+
+    &__body {
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 344px;
+            height: 344px;
+            background: url('../img/error-404/home-dash.svg') 0 0 no-repeat;
+            z-index: 1;
+            @media screen and (max-width: 768px){
+                display: none;
+            }
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: -70px;
+            right: -30px;
+            width: 201px;
+            height: 243px;
+            transform: rotate(90deg);
+            border-radius: 20px;
+            background-color: var(--green);
+            z-index: 1;
+            @media screen and (max-width: 768px){
+                display: none;
+            }
+        }
+    }
+    &__content{
+        position: relative;
+        padding: 69px 84px;
+        border-radius: 29px;
+        backdrop-filter: blur(11px);
+        background-color: rgba(255, 255, 255, 0.85);
+        z-index: 10;
+        @media screen and (max-width: 768px){
+            padding: 30px;
+        }
+    }
+    &__title {
+        font-family: "Cabin";
+        font-size: 120px;
+        font-weight: 700;
+        line-height: 116%;
+        color: var(--dark);
+        margin-bottom: 5px;
+        @media screen and (max-width: 768px){
+            font-size: 60px;
+        }
+    }
+
+    &__sub-title {
+        font-family: "Cabin";
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 116%;
+        margin-bottom: 10px;
+        @media screen and (max-width: 768px){
+            font-size: 30px;
+        }
+    }
+
+    &__text {
+        max-width: 277px;
+        line-height: 147.5%;
+        color: var(--liteGrey);
+        margin: 0 auto 44px auto;
+        @media screen and (max-width: 768px){
+            margin: 0 auto 20px auto;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        color: var(--dark);
+        text-align: center;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 160%;
+        padding: 15px 56px;
+        border-radius: 42px;
+        border: 2px solid transparent;
+        background-color: var(--yellow);
+        transition: all 0.5s ease 0s;
+        &:hover{
+            border-color: var(--yellow);
+            background-color: var(--white);
+        }
+    }
+}
